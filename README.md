@@ -1,4 +1,4 @@
-# bindata-dynamic-mask-proxy-
+# bigdata-dynamic-mask-proxy
 基于netty实现的一个支持sql的大数据代理服务,用于处理不支持UDF的数据库和一些NOSQL非关系型数据库，可以用一个代理端口监控数据库的执行的内容，并对拦截的报文进行修改，记录日志或直接阻断会话
 
 
