@@ -2,6 +2,7 @@ package com.proxy.common;
 
 import com.proxy.model.ProxyConfig;
 import com.proxy.resultparser.DefaultParser;
+import com.proxy.resultparser.MongoDbParser;
 import com.proxy.resultparser.RedisParser;
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelHandler;
@@ -27,6 +28,9 @@ public class DataHandler extends ChannelHandlerAdapter {
         switch (config.getDbType()) {
             case redis:
                 sqlParser = new RedisParser();
+                break;
+            case mongodb:
+                sqlParser = new MongoDbParser();
                 break;
             default:
                 sqlParser = new DefaultParser();
